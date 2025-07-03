@@ -8,8 +8,10 @@ from io import BytesIO
 st.title("📄 Invoice PDF to Excel Converter")
 
 # Upload PDF file
-uploaded = files.upload()
-pdf_path = list(uploaded.keys())[0]
+uploaded_file = st.file_uploader("Upload Invoice PDF", type=["pdf"])
+if uploaded_file is not None:
+    pdf_reader = PyPDF2.PdfReader(uploaded_file)
+
 excel_path = 'invoice_Breakdown.xlsx'
 
 # Create Excel workbook
