@@ -1,9 +1,11 @@
-!pip install PyPDF2 openpyxl
 
-from google.colab import files
+import streamlit as st
 import re
 import PyPDF2
 import openpyxl
+from io import BytesIO
+
+st.title("📄 Invoice PDF to Excel Converter")
 
 # Upload PDF file
 uploaded = files.upload()
