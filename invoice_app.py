@@ -4,6 +4,15 @@ import PyPDF2
 import openpyxl
 from io import BytesIO
 
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 st.title("📄 DAFF Invoices PDF to Excel Converter")
 
 uploaded_file = st.file_uploader("Upload Invoice PDF", type=["pdf"])
