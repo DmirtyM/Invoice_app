@@ -4,7 +4,7 @@ import PyPDF2
 import openpyxl
 from io import BytesIO
 
-st.title("📄 Invoice PDF to Excel Converter")
+st.title("📄 DAFF Invoices PDF to Excel Converter")
 
 uploaded_file = st.file_uploader("Upload Invoice PDF", type=["pdf"])
 
